@@ -1,0 +1,114 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #2e3136;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  margin: 0 auto;
+  width: 90vh;
+  height: 90vh;
+  display: grid;
+  grid-template: auto repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.header {
+  grid-column: 1 / span 4;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  grid-template: 1fr / 1fr auto;
+}
+
+.header h2,
+.header p {
+  margin: 0;
+  line-height: 2rem;
+  padding: 5px;
+}
+
+.header p {
+  background-color: #4a4c51;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 5px;
+}
+
+.grid > div:not(.header) {
+  margin: 5px;
+  background-color: #424549;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 5px solid #99aab5;
+}
+
+.selected {
+  border-color: #7289da !important;
+}
+
+.done {
+  border-color: #43b581 !important;
+}
+
+.done .tile {
+  cursor: default;
+}
+
+.tile {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 5px #2e3136;
+}
+
+/* Different images */
+.i1 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903593470835449886/IMG_4441.jpg);
+}
+
+.i2 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903593980443365416/IMG_4444.jpg);
+}
+
+.i3 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903594131132153867/IMG_4445.jpg);
+}
+
+.i4 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903594342885785640/unknown.png);
+}
+
+.i5 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903595828713779200/images.png);
+}
+
+.i6 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903596022125703208/images.png);
+}
+
+.i7 {
+  background-image: url(https://cdn.discordapp.com/attachments/901041345815252992/903596206121431050/Z.png);
+}
+
+.i8 {
+  background-image: url(https://media.snl.no/media/168356/standard_compressed_shutterstock_1691405560.jpg);
+}
+
+/* Maintain square and use full size of window */
+@media only screen and (orientation: portrait) {
+  .grid {
+    width: 90vw;
+    height: 90vw;
+  }
+}
